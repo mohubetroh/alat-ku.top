@@ -50,6 +50,48 @@ window.addEventListener("keydown",function(e){if(e.ctrlKey&&(e.which==65||e.whic
 <script type="text/javascript">
 document.onkeydown=function(e){e=e||window.event;if(e.keyCode==123||e.keyCode==18){return false}}
 </script>
+                <!-- Scroll to top -->
+    		<a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+            <!-- Scroll to top end-->
+            <!-- Scroll -->
+            <script type="text/javascript">
+                if ($('#back-to-top').length) {
+                    var scrollTrigger = 100, // px
+                        backToTop = function () {
+                            var scrollTop = $(window).scrollTop();
+                            if (scrollTop > scrollTrigger) {
+                                $('#back-to-top').addClass('show');
+                            } else {
+                                $('#back-to-top').removeClass('show');
+                            }
+                        };
+                    backToTop();
+                    $(window).on('scroll', function () {
+                        backToTop();
+                    });
+                    $('#back-to-top').on('click', function (e) {
+                        e.preventDefault();
+                        $('html,body').animate({
+                            scrollTop: 0
+                        }, 700);
+                    });
+                }
+            </script>
+            
+            <!-- Global site tag (gtag.js) - Google AdWords: 974813875 -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=AW-974813875"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+    
+                gtag('config', 'AW-974813875');
+            </script>
+            
+            <!-- Event snippet for Visit conversion page -->
+            <script>
+              gtag('event', 'conversion', {'send_to': 'AW-974813875/CkOwCJ76zoQBELP16dAD'});
+            </script>
 </head>
  
  <div><h1>ALAT UAB</h1></div>
